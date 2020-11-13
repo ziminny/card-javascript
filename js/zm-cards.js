@@ -104,8 +104,8 @@
             });
             } 
 }
-
-    var loadAnimation = new (function() {
+    // MAIN
+    var loadCards = new (function() {
             this.init = function(args) {   
                 
                 const zmPrefiz = "zm";

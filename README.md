@@ -33,7 +33,7 @@ Javascript
  <script src="js/zm-cards.js"></script>
     <script type="text/javascript">
 
-    loadAnimation.init({
+    loadCards.init({
             cards: [
                     {
                         iconLeft: "fas fa-list", //icone da esquerda primeiro card
