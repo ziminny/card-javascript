@@ -1,0 +1,71 @@
+// Main Container cards
+.zm-cards {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .category-product-main-painel {
+            background-color: $background-color-cards;      
+            max-height: 70px;
+            min-width: 250px;
+            margin: 0 30px 30px;
+            border-radius: 10px;
+            flex: 1;
+            cursor: pointer;                        
+                .add-new-category-row {       
+                display: flex;
+                box-shadow: $shadow-cards;
+                border-radius: 10px;
+                    .add-new-left-col{                  
+                        //background-image: $gradiend-color-card-categories;
+                        min-height: 70px;
+                        width: 20%;
+                        border-radius: 10px 0 0 10px;
+                        display: flex;
+                        font-size: 30px;
+                        justify-content: center;
+                        align-items: center;
+                        color: $color-icons-card;
+                    }
+                    .line-right-card {
+                        width: 7px;
+                        //background-image: $gradiend-color-card-car;
+                        border-radius: 0 10px 10px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .card-icon-info {
+                            color: $color-icons-card;
+                            font-weight: lighter;
+                            display: flex;
+                            opacity: 0;                       
+                        }
+                    }
+                    .add-new-right-col {
+                        display: flex; 
+                        width: 100%;
+                        .content-category-title-body { 
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            .add-new-title {
+                                font-size: 13px;
+                                padding-left: 6px;  
+                            
+                            }
+                            .add-new-message {
+                                font-size: 25px;
+                                font-weight: 600;
+                                padding-left: 6px; 
+
+                            }
+                        }
+
+                }
+            }
+    }
+}
+
+

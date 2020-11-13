@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+.m-container {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.m-content {
+  width: 95%;
+  margin: 0 auto;
+}
+.m-content .zm-display-none {
+  display: none;
+}
+.m-content .zm-display-flex {
+  display: flex;
+}
+.m-content .zm-display-block {
+  display: block;
+}
+.m-content .zm-display-grid {
+  display: grid;
+}
+.m-content .zm-display-inline {
+  display: inline;
+}
+
+.zm-cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.zm-cards .category-product-main-painel {
+  background-color: white;
+  max-height: 70px;
+  min-width: 250px;
+  margin: 0 30px 30px;
+  border-radius: 10px;
+  flex: 1;
+  cursor: pointer;
+}
+.zm-cards .category-product-main-painel .add-new-category-row {
+  display: flex;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.2), 1px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.zm-cards .category-product-main-painel .add-new-category-row .add-new-left-col {
+  min-height: 70px;
+  width: 20%;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.zm-cards .category-product-main-painel .add-new-category-row .line-right-card {
+  width: 7px;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.zm-cards .category-product-main-painel .add-new-category-row .line-right-card .card-icon-info {
+  color: white;
+  font-weight: lighter;
+  display: flex;
+  opacity: 0;
+}
+.zm-cards .category-product-main-painel .add-new-category-row .add-new-right-col {
+  display: flex;
+  width: 100%;
+}
+.zm-cards .category-product-main-painel .add-new-category-row .add-new-right-col .content-category-title-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.zm-cards .category-product-main-painel .add-new-category-row .add-new-right-col .content-category-title-body .add-new-title {
+  font-size: 13px;
+  padding-left: 6px;
+}
+.zm-cards .category-product-main-painel .add-new-category-row .add-new-right-col .content-category-title-body .add-new-message {
+  font-size: 25px;
+  font-weight: 600;
+  padding-left: 6px;
+}
+
+@keyframes cards-icon-size-enter {
+  from {
+    font-size: 30px;
+  }
+  to {
+    font-size: 35px;
+  }
+}
+@keyframes cards-icon-size-leave {
+  from {
+    font-size: 35px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+@keyframes div-rigth {
+  from {
+    width: 7px;
+  }
+  to {
+    width: 20%;
+  }
+}
+@keyframes div-rigth-reverse {
+  from {
+    width: 7px;
+  }
+  to {
+    width: 20%;
+  }
+}
+@keyframes icon-info-show {
+  from {
+    opacity: 0;
+    font-size: 1px;
+  }
+  to {
+    opacity: 1;
+    font-size: 28px;
+  }
+}
+@keyframes icon-info-show-reverse {
+  from {
+    opacity: 1;
+    font-size: 28px;
+  }
+  to {
+    opacity: 0;
+    font-size: 1px;
+  }
+}
+@keyframes opacity-peroducts-cards {
+  from {
+    opacity: 0;
+    background-color: #F4F5F7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=all.css.map */

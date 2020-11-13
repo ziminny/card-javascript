@@ -1,0 +1,67 @@
+
+@keyframes cards-icon-size-enter {
+    from {
+        font-size: 30px;
+    }
+    to {
+        font-size: 35px;
+    }
+}
+@keyframes cards-icon-size-leave {
+    from {
+        font-size: 35px;
+    }
+    to {
+        font-size: 30px;
+    }
+}
+@keyframes div-rigth  {
+    from {
+        width:7px;
+    }
+    to {
+        width:20%;
+    }
+}
+@keyframes div-rigth-reverse  {
+    from {
+        width:7px;
+    }
+    to {
+        width:20%;
+    }
+}
+
+@keyframes icon-info-show  {
+
+    from {
+        opacity: 0;
+        font-size: 1px;
+    }
+    to {
+        opacity: 1;
+        font-size: 28px;     
+    }
+}
+
+@keyframes icon-info-show-reverse  {
+
+    from {
+        opacity: 1;
+        font-size: 28px;
+    }
+    to {
+        opacity: 0;
+        font-size: 1px;        
+    }
+}
+
+@keyframes opacity-peroducts-cards {
+    from {
+        opacity: 0;
+        background-color: #F4F5F7;
+    }
+    to {
+        opacity: 1;
+    }
+}

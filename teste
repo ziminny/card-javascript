@@ -1,0 +1,145 @@
+
+                <div class="category-product-main-painel">
+                        <div class="add-new-category-row"  id="buttons-cards-products1">
+                        <div class="add-new-left-col-1"><i class="fas fa-list"></i></div>
+                            <div class="add-new-right-col">
+                                <div class="content-category-title-body">
+                                    <div class="add-new-title">Categorias</div>
+                                    <div class="add-new-message">7</div>
+                                </div>
+                                <div class="line-right-card-1">
+                                        <i class="fas fa-info-circle card-icon-info"></i>
+                                </div>
+                            </div> 
+                        </div>
+                    </div> <!-- CARD 2 CATEGORIES     -->
+                                        
+                    <div class="category-product-main-painel">
+                            <div class="add-new-category-row"  id="buttons-cards-products2">
+                            <div class="add-new-left-col-2"><i class="fab fa-product-hunt"></i></div>
+                                <div class="add-new-right-col">
+                                    <div class="content-category-title-body">
+                                        <div class="add-new-title">Produtos</div>
+                                        <div class="add-new-message">122</div>
+                                    </div>
+                                    <div class="line-right-card-2">
+                                            <i class="fas fa-info-circle card-icon-info"></i>
+                                    </div>
+                                </div> 
+                            </div>
+                    </div> <!-- CARD 2 PRODUCTS -->    
+                                           
+                <div class="category-product-main-painel">
+
+                        <div class="add-new-category-row"  id="buttons-cards-products3">
+                                <div class="add-new-left-col-3"><i class="fas fa-cart-arrow-down"></i></div>
+                                    <div class="add-new-right-col">
+                                        <div class="content-category-title-body">
+                                            <div class="add-new-title">Carrinho</div>
+                                            <div class="add-new-message">1</div>
+                                        </div>
+                                        <div class="line-right-card-3">
+                                                <i class="fas fa-info-circle card-icon-info"></i>
+                                        </div>
+                                    </div> 
+                        </div>
+                </div>  <!-- CARD 3 CAR -->    
+                
+                
+        </div> END CARDS
+
+                        <!-- CONTENT -->
+            <div class="m-content">
+                    <div class="container-car-dynamic">
+                        Carrinho
+                    </div>
+                
+                    <div class="container-categories-dynamic">
+                        Categorias
+                    </div>
+                
+                    <div class="container-products-dynamic">    
+                        Produtos 
+                    </div>
+            </div> <!-- END CONTENT -->
+
+
+
+
+                let cards = document.querySelectorAll(".category-product-main-painel");
+    let icon = document.querySelector(".add-new-left-col");
+    let divRight = [];
+    let iconInner = [];
+  
+        for (let index = 0; index < cards.length; index++) {
+            
+                divRight[index] = document.querySelector(`.line-right-card-${index+1}`);
+                iconInner[index] = document.querySelector(`.line-right-card-${index+1} .card-icon-info`);
+
+                     cards[index].addEventListener("click", () => {
+                         
+                            resetElements(divRight,iconInner , index)
+                            divRight[index].style.animation = "div-rigth 0.5s ease-in-out forwards"
+                            iconInner[index].style.animation = "icon-info-show 0.6s ease-out forwards"
+                     })
+
+        }
+// Por padrão começa com a categoria de produtos        
+divRight[1].style.animation = "div-rigth 0.5s ease-in-out forwards"
+iconInner[1].style.animation = "icon-info-show 0.6s ease-out forwards"
+// Funçao para quando clicar em uma categoria voltar só a que esta aberta                
+let resetElements = (div, icon , index) => {
+
+    icon.filter((element) => {
+            return element != iconInner[index];
+        }).map((element , i)=> {
+        
+                if(element.style.animation != "")  {
+                    element.style.animation = ""
+                    element.style.animation = "icon-info-show-reverse 0.6s ease-out forwards"                           
+                    }
+        });
+
+    div.filter((element) => {
+            return element != divRight[index];
+        }).map((element , i)=> {
+        
+                if(element.style.animation != "")  {
+                    element.style.animation = ""
+                    element.style.animation = "div-rigth-reverse 0.5s ease-in-out reverse forwards"                      
+                }
+           });
+} 
+
+
+//Cards
+let buttonCategories = document.querySelector("#buttons-cards-products1");
+let buttonProducts = document.querySelector("#buttons-cards-products2");
+let buttonCar = document.querySelector("#buttons-cards-products3");
+//Ativa e desativa
+let cardCategories = document.querySelector(".container-categories-dynamic");
+let cardCar = document.querySelector(".container-car-dynamic");
+let cardProducts = document.querySelector(".container-products-dynamic");
+
+
+buttonCategories.addEventListener("click",() => {
+   events(cardCar,cardProducts,cardCategories);
+   })
+
+buttonProducts.addEventListener("click", () => {
+
+   events(cardCar,cardCategories,cardProducts);
+ 
+})
+
+buttonCar.addEventListener("click", () => {
+
+   events(cardProducts,cardCategories,cardCar);
+})
+
+let events = (firsrtDisplayNone , secondtDisplayNone , displayActive) => {
+   firsrtDisplayNone.style.display = "none";
+   secondtDisplayNone.style.display = "none";
+   displayActive.style.animation = "opacity-peroducts-cards 1s ease-in-out forwards"
+   displayActive.style.display = "flex";
+}

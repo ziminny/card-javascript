@@ -1,0 +1,29 @@
+.m-container {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+    .m-content {
+       width: 95%; 
+       margin: 0 auto;
+
+    .zm-display-none{
+        display: none;
+    }
+    .zm-display-flex {
+        display: flex;
+    }
+    .zm-display-block {
+        display: block;
+    }
+    .zm-display-grid {
+        display: grid;
+    }
+    .zm-display-inline {
+        display: inline;
+    }
+}
+
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+                                  
+
+                
+        <div class="zm-cards" style="margin-top: 30px;">
+
+        </div>  
+       
+
+            <div class="m-content">
+                <div class="item1 zm-display-flex">
+                    <div style="width: 100%; margin:0 auto; text-align:center">Content categories</div>
+                </div>
+            
+                <div class="item2 zm-display-none ">
+                    <div style="width: 100%; margin:0 auto; text-align:center">Content products</div>
+                </div>
+            
+                <div class="item3 zm-display-none">    
+                    <div style="width: 100%; margin:0 auto; text-align:center">Content Cart</div> 
+                </div>
+
+        </div> <!-- END CONTENT -->
+
+</body>
+</html>
+
+    <script src="js/zm-cards.js"></script>
+    <script type="text/javascript">
+
+    loadAnimation.init({
+            cards: [
+                    {
+                        iconLeft: "fas fa-list",
+                        iconRight: "fas fa-info-circle",
+                        content:"zm-content-product",
+                        backgroundGradient:[ "#0D91D1" , "#1479ac"],
+                        target:"item1",
+                        total: "25",
+                        name:"Categories",
+                        active: true,
+
+                    },
+                    {
+                        iconLeft: "fab fa-product-hunt",
+                        iconRight: "fas fa-info-circle",
+                        content:"zm-content-categories",
+                        backgroundGradient:["#69306D","#86358b"],
+                        target:"item2",
+                        total: "25",
+                        name:"Products",
+                        
+                        
+                    },
+                    {
+                        iconLeft: "fas fa-cart-arrow-down",
+                        iconRight: "fas fa-info-circle",
+                        content:"zm-content-car",
+                        backgroundGradient:["#EA8C55" ,"#c77647"],
+                        target:"item3",
+                        total: "2",
+                        name:"Car",
+                        
+                       
+                    },
+                    
+            ]
+    })
+    
+
+
+  
+</script>
+
+                                
