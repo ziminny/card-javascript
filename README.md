@@ -1,22 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards</title>
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-</head>
-<body>
-                                  
 
-                
-        <div class="zm-cards" style="margin-top: 30px;">
 
-        </div>  
+## Documentação
+
+
+HTML
+
+```html    
+        <!-- CARDS-->
+        <div class="zm-cards" style="margin-top: 30px;"></div>  
        
-
-            <div class="m-content">
+         <!-- CONTEUDO --> 
+         <div class="m-content">
                 <div class="item1 zm-display-flex">
                     <div style="width: 100%; margin:0 auto; text-align:center">Content categories</div>
                 </div>
@@ -28,26 +22,27 @@
                 <div class="item3 zm-display-none">    
                     <div style="width: 100%; margin:0 auto; text-align:center">Content Cart</div> 
                 </div>
+         </div>
+```
 
-        </div> 
 
-</body>
-</html>
 
-    <script src="js/zm-cards.js"></script>
+Javascript
+
+```javascript
+ <script src="js/zm-cards.js"></script>
     <script type="text/javascript">
 
     loadAnimation.init({
             cards: [
                     {
-                        iconLeft: "fas fa-list",
-                        iconRight: "fas fa-info-circle",
-                        backgroundGradient:[ "#0D91D1" , "#1479ac"],
-                        target:"item1",
+                        iconLeft: "fas fa-list", //icone da esquerda primeiro card
+                        iconRight: "fas fa-info-circle", //icone da direita primeiro card
+                        backgroundGradient:[ "#0D91D1" , "#1479ac"], // background do primeiro card
+                        target:"item1", //mostra o conteudo da div com a class item1
                         total: "25",
                         name:"Categories",
-                        active: true,
-
+                        active: true, // iniciara nesta página 
                     },
                     {
                         iconLeft: "fab fa-product-hunt",
@@ -55,9 +50,7 @@
                         backgroundGradient:["#69306D","#86358b"],
                         target:"item2",
                         total: "25",
-                        name:"Products",
-                        
-                        
+                        name:"Products",     
                     },
                     {
                         iconLeft: "fas fa-cart-arrow-down",
@@ -66,16 +59,13 @@
                         target:"item3",
                         total: "2",
                         name:"Car",
-                        
-                       
                     },
+                    //.....
                     
             ]
     })
-    
-
-
-  
 </script>
+```
 
-                                
+
+
